@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex ;
+            width: 700px;
+            height: 400px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 700px;
+            height: 400px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option"); 
+            const list_image = ["gow1.jpg","gow2.jpg","gow3.jpg","gow4.jpg","gow5.jpg"];
+
+            if(pilihan.value == "gow1"){
+                let select = list_image[0];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "gow2"){
+                let select = list_image[1];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "gow3"){
+                let select = list_image[2];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "gow4"){
+                let select = list_image[3];
+                document.getElementById("gambar").src = `iamges/${select}`
+            }
+
+            if(pilihan.value == "gow5"){
+                let select = list_image[4];
+                document.getElementById("gambar").src = `iamges/${select}`
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="gow1">God of War 1</option>
+        <option value="gow2">God of War 2</option>
+        <option value="gow3">God of War 3</option>
+        <option value="gow4">God of War (2018)</option>
+        <option value="gow5">God of War Ragnarok</option>
+    </select>
+
+    <div class="container">
+        <div class="box">
+            <img id="gambar">
+        </div>
+    </div>
+</body>
+</html>
